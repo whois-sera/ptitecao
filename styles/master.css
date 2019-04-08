@@ -1,0 +1,236 @@
+/* ---------- Variables ---------- */
+/* ---------- Reset ---------- */
+*,
+*:active,
+*:hover,
+*:focus {
+  outline: none; }
+
+body {
+  margin: 0px; }
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px; }
+  nav ul li a {
+    text-decoration: none; }
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "impact";
+  src: url("../fonts/impact.ttf"); }
+
+/* ---------- Global ---------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #1D2339; }
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #011C3A; }
+
+h2 {
+  font-family: "impact", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: #011C3A;
+  margin: 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+svg {
+  fill: #011C3A; }
+
+/* ---------- Layout ----------*/
+.wrapper,
+.header,
+.main,
+.footer {
+  width: 100%; }
+
+.wrapper {
+  overflow: hidden; }
+
+.header-box,
+.main-box,
+.footer-box {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/*---------- Heading ----------*/
+.header {
+  background-image: url("../images/artwork/header.png");
+  background-position: center;
+  height: 567px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 20; }
+
+.header-box {
+  height: 100%; }
+
+header {
+  position: relative;
+  height: 100%; }
+
+.site-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.button-wrapper,
+.closebtn {
+  display: none; }
+
+.logo-bg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 270px;
+  background-color: rgba(255, 255, 255, 0.7); }
+  .logo-bg img {
+    display: block; }
+
+/* ---------- Navs ---------- */
+.header-nav {
+  position: absolute;
+  bottom: -42.5px;
+  width: 100%; }
+  .header-nav nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .header-nav nav ul li {
+      width: 260px;
+      height: 85px; }
+      .header-nav nav ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        line-height: 85px;
+        background-color: #EEEEEE;
+        color: #011C3A;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        transition: 0.25s ease-in-out; }
+        .header-nav nav ul li a:hover {
+          background-color: #fec629; }
+
+/* ---------- Articles ---------- */
+.article {
+  margin-bottom: 50px;
+  transform: skew(0deg, -2deg);
+  position: relative; }
+
+.article-box {
+  position: relative;
+  z-index: 10;
+  overflow: hidden; }
+
+article {
+  display: flex;
+  flex-direction: row;
+  max-height: 600px; }
+  article div {
+    width: 50%;
+    overflow: hidden; }
+    article div img {
+      transform: skew(0deg, 2deg) scale(1.1);
+      width: 100%; }
+
+.article-body {
+  background-color: #EEEEEE;
+  padding: 40px; }
+  .article-body p {
+    transform: skew(0deg, 2deg); }
+
+.titre {
+  transform: skew(0deg, 2deg);
+  margin: 0 auto;
+  overflow: visible; }
+
+/* ---------- Footer ----------*/
+.footer {
+  position: relative;
+  z-index: 20;
+  background-color: #EEEEEE; }
+
+footer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px; }
+  footer div {
+    width: 100%; }
+    footer div ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+
+.social-nav {
+  margin-bottom: 100px; }
+  .social-nav li {
+    margin-right: 50px; }
+    .social-nav li:last-child {
+      margin-right: 0px; }
+
+.footer-nav li {
+  margin-right: 20px; }
+  .footer-nav li:last-child {
+    margin-right: 0px; }
+
+.footer-nav a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #011C3A; }
+
+/* ---------- Triangles ----------*/
+.triangle, .t1, .t2, .t3, .t4, .t5 {
+  position: absolute; }
+
+.t1 {
+  bottom: calc(100% - 316px);
+  left: calc(100% - 300px);
+  width: 600px;
+  height: 632px;
+  background-image: url("../images/formes/tri1.png"); }
+
+.t2 {
+  top: calc(100% - 316px);
+  right: calc(100% - 300px);
+  width: 600px;
+  height: 632px;
+  background-image: url("../images/formes/tri2.png"); }
+
+.t3 {
+  top: calc(100% - 260px);
+  left: calc(100% - 240px);
+  width: 526px;
+  height: 548px;
+  background-image: url("../images/formes/tri3.png"); }
+
+.t4 {
+  top: calc(100% - 260px);
+  right: calc(100% - 230px);
+  width: 526px;
+  height: 548px;
+  background-image: url("../images/formes/tri4.png"); }
+
+.t5 {
+  top: calc(100% - 230px);
+  left: calc(100% - 247px);
+  width: 494px;
+  height: 460px;
+  background-image: url("../images/formes/tri5.png"); }

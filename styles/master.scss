@@ -1,0 +1,345 @@
+/* ---------- Variables ---------- */
+$w100: 100%;
+$box: 1200px;
+$w90: 90%;
+$center: 0 auto;
+$light: #EEEEEE;
+$dark: #011C3A;
+$roboto: 'Roboto',
+sans-serif;
+$opSan: 'Open Sans',
+sans-serif;
+$impact: 'impact',
+sans-serif;
+
+/* ---------- Reset ---------- */
+*,
+*:active,
+*:hover,
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0px;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding-left: 0px;
+        margin: 0px;
+
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* ---------- Fonts ---------- */
+@font-face {
+    font-family: "impact";
+    src: url("../fonts/impact.ttf");
+}
+
+
+/* ---------- Global ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1D2339;
+}
+
+p {
+    font-family: $opSan;
+    font-size: 18px;
+    color: $dark;
+}
+
+h2 {
+    font-family: $impact;
+    font-size: 50px;
+    text-align: center;
+    color: $dark;
+    margin: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+svg {
+    fill: $dark;
+}
+
+/* ---------- Layout ----------*/
+.wrapper,
+.header,
+.main,
+.footer {
+    width: $w100;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.header-box,
+.main-box,
+.footer-box {
+    max-width: $box;
+    margin: $center;
+}
+
+/*---------- Heading ----------*/
+.header {
+    background-image: url('../images/artwork/header.png');
+    background-position: center;
+    height: 567px; // min-height break child's heigh 100%
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 20;
+
+}
+
+.header-box {
+    height: 100%;
+
+}
+
+header {
+    position: relative;
+    height: 100%;
+
+}
+
+.site-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.button-wrapper,
+.closebtn {
+    display: none;
+}
+
+.logo-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 270px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    img {
+        display: block;
+    }
+
+    @media screen and (min-width: 1200px) {
+        img {
+            //width: 180px;
+        }
+    }
+}
+
+/* ---------- Navs ---------- */
+
+.header-nav {
+    position: absolute;
+    bottom: -42.5px;
+    width: $w100;
+
+    nav {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            li {
+                width: 260px;
+                height: 85px;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding-left: 20px;
+                    line-height: 85px; //Centrer le texte horizontalement
+                    background-color: $light;
+                    color: $dark;
+                    font-family: $roboto;
+                    font-size: 20px;
+                    transition: 0.25s ease-in-out;
+
+                    &:hover {
+                        background-color: #fec629;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------- Articles ---------- */
+
+.article {
+    margin-bottom: 50px;
+    transform: skew(0deg, -2deg);
+    position: relative;
+
+}
+
+.article-box {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    max-height: 600px;
+
+    div {
+        width: 50%;
+        overflow: hidden;
+
+        img {
+            transform: skew(0deg, 2deg) scale(1.1);
+            width: 100%;
+        }
+    }
+
+}
+
+.article-body {
+    background-color: $light;
+    padding: 40px;
+
+
+    p {
+        transform: skew(0deg, 2deg);
+    }
+}
+
+.titre {
+    transform: skew(0deg, 2deg);
+    margin: 0 auto;
+    overflow: visible;
+}
+
+/* ---------- Footer ----------*/
+
+.footer {
+    position: relative;
+    z-index: 20;
+    background-color: $light;
+
+}
+
+footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+
+    div {
+        width: 100%;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.social-nav {
+    margin-bottom: 100px;
+
+    li {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.footer-nav {
+    li {
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    a {
+        font-family: $opSan;
+        font-size: 18px;
+        color: $dark;
+    }
+}
+
+/* ---------- Triangles ----------*/
+
+.triangle {
+    position: absolute;
+}
+
+.t1 {
+    @extend .triangle;
+    bottom: calc(100% - 316px);
+    left: calc(100% - 300px);
+    width: 600px;
+    height: 632px;
+    background-image: url('../images/formes/tri1.png');
+}
+
+.t2 {
+    @extend .triangle;
+    top: calc(100% - 316px);
+    right: calc(100% - 300px);
+    width: 600px;
+    height: 632px;
+    background-image: url('../images/formes/tri2.png');
+}
+
+.t3 {
+    @extend .triangle;
+    top: calc(100% - 260px);
+    left: calc(100% - 240px);
+    width: 526px;
+    height: 548px;
+    background-image: url('../images/formes/tri3.png');
+}
+
+.t4 {
+    @extend .triangle;
+    top: calc(100% - 260px);
+    right: calc(100% - 230px);
+    width: 526px;
+    height: 548px;
+    background-image: url('../images/formes/tri4.png');
+}
+
+.t5 {
+    @extend .triangle;
+    top: calc(100% - 230px);
+    left: calc(100% - 247px);
+    width: 494px;
+    height: 460px;
+    background-image: url('../images/formes/tri5.png');
+}
